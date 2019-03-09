@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Fitbit Step Analysis</title>
+    <!-- <link rel="stylesheet" href="http://people.ischool.berkeley.edu/~paulang/css/stylesPart2.css"> -->
+    <link rel="stylesheet" href="./css/project1part2.css">
+
+    <!-- Bootstrap cdn -->
+  	<!-- Latest compiled and minified CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  	<!-- Optional theme -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+  	<!-- <script type="text/javascript" src="http://people.ischool.berkeley.edu/~paulang/js/scriptPart2.js"></script> -->
+    <script type="text/javascript" src="./js/project1part2.js"></script>
+  </head>
+<body>
+  <header>
+      <div class = "container">
+          <div class="nav"><a href="index.html">Main Page</a></div>
+          <div class="nav"><a href="Assign1Part1.html">Project 1 Part1</a></div>
+          <div class="nav"><a href="ComingSoon.html">Project 2</a></div>
+          <div class="nav"><a href="ComingSoon.html">Project 3</a></div>
+      </div>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-16">
+        <h2>My Fitbit Steps</h2>
+        <h5>(Aug '16 - Jan '19)</h5>
+        <div id="pageText">
+          <p>
+            This chart shows the number of steps recorded by my fitbit between August 2016 and January 2019. The time period is plotted in the x-axis and the number of steps in the y-axis. The data is divided into two categories:
+            <ul>
+              <li>Number of steps on days I was at work. These data points are shown as orange circles.</li>
+              <li>Number of steps on days I was at home (includes holidays and work from home days). These data points are shown as blue circles.
+            </ul>
+            My daily step target is 10000 steps. The blue and orange shades for the circles also represent how close I was to my target for a particular day - the lighter the saturation the lesser the number of steps taken that day. The color scale is capped at the target, i.e. 10000 or more steps are shown with the max saturation for the scale.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div id="stepsLine"></div>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-xs-16">
+          <div id="pageText">
+            <p>This graph provides the following types of interactivity.
+              <ol>
+                <li>Pan and zoom using the mouse over the main chart.</li>
+                <li>Use the brush in the summary chart to select and analyze desired areas of the main chart.</li>
+                <li>Mouseover the circles to view corresponding date and number of steps. This also results in an increase on the size of the circle. </li>
+              </ol>
+            </p>
+            <p>
+              The chart above doesn't indicate whether I walk more on days I am at home or on days I am at work. This is because on some work days I have to go to different parts of the office building or to different buildings for meetings and hence accumulate more steps, whereas on some days I rarely leave my workstation and hence accumulate very less steps. On the other hand, on holidays and work from home days when I have to run chores or go somewhere after work hours I accumulate more steps. But when I am at home all day I accumulate lesser steps. I used to go for a run every day in the first half of 2018 which is why i was consistently surpassing the daily target during that time irrespective of whether I was at home or at work. There are a few instances where the fitbit recorded zero steps. These were the days when my fitbit device ran out of charge.
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>
